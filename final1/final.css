@@ -1,0 +1,232 @@
+* { box-sizing: border-box; }
+
+h1         {
+             text-align: center;
+             font-weight: bold;
+             font-style: normal;
+             text-decoration: none;
+             background-color: #7f7f7f;
+             margin: 0;
+             font-family: Georgia, Times New Roman, sans-serif;
+           }
+
+h2         {
+             font-weight: bold;
+             padding: 2em 0 0 0;
+             font-family: Georgia, Times New Roman, sans-serif;
+           }
+
+h3         {
+             padding: 2em 0 0 0;
+           }
+
+p          {
+             font-family: Georgia, Times New Roman, sans-serif;
+           }
+
+nav  	   { 
+              padding: 0;
+              font-size: 120%;
+	          font-weight: bold;
+              text-align: center;
+              background-color: #ff3232;
+              box-shadow: 0 .5em 1em #aaaaaa; 
+     	   }
+
+nav, a      {
+              text-decoration: none;
+              color: #000000;
+           }
+
+nav ul     {
+              list-style-type: none;
+              margin: 0;
+              padding: 1px 20px 20px 0;
+              font-size: 1.2em;
+           }                	 
+
+nav li     {
+              color: #ffffff;  
+           }
+
+img        {
+             height: 400px;
+           }
+
+body       {
+             margin: 0;
+             padding: 0;
+           }
+
+main      {
+            margin: 1.5em;
+          }
+
+figcaption {
+             text-align: center;
+             font-style: italic;
+             font-family: Georgia, Times New Roman, serif;
+           } 
+
+footer     {
+              float: left;
+              font-size: 75%;
+              padding: 10em 0 0 0;
+              margin: 1.5em;
+              background-color: #ffffff;
+              font-family: Georgia, Times New Roman, serif;
+           }
+
+.slider    {
+             font-style: italic;
+           }
+
+
+.indentp     {
+               text-indent: 1.5em;
+             } 
+
+.galleryimg   {
+                width: auto;
+                height: 100%;
+              }               
+
+#galleryhead    {
+                  text-align: center;
+                }
+
+#gallerycontent {
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                } 
+
+#piecehead   {
+               text-align: center;
+               font-style: italic;
+             }              
+
+#pull      {
+             float: right;
+             font-weight: bold;
+           }
+
+#hero       {
+              background-color: #ffffff;
+            }
+
+#homehero  {
+              height: 400px;
+              background-image: url(hero.jpg);
+              background-size: 100% 100%;
+              background-repeat: no-repeat;
+              background-position-y: center;
+           }
+
+#phone     {
+             padding: 1em 0 0 0;
+           }
+
+
+form {
+       display: flex;
+       flex-direction: column;
+       flex-wrap: nowrap;
+     }
+
+input, textarea {
+                  margin: 0 0 .5em;
+                }    
+
+@media only screen and (min-width: 600px) {
+                                            nav ul {
+                                                     display: flex;
+                                                     flex-direction: row;
+                                                     flex-wrap: nowrap;
+                                                     justify-content: flex-start;
+                                                     justify-content: flex-end;
+                                                     justify-content: space-between;
+                                                   }
+
+                                            nav li {
+                                                     border-bottom: none;
+                                                   } 
+                                            
+                                            form {
+                                                   width: 60%;
+                                                   max-width: 30em;
+                                                   display: grid;
+                                                   grid-gap: 1em; 
+                                                   grid-template-rows: auto;
+                                                   grid-template-columns: 6em 1fr;
+                                                 }
+
+                                            input[type="submit"] {
+                                                                   width: 9em;
+                                                                   grid-column: 2/3;
+                                                                 }
+
+                                            #wrapper {
+                                                       
+                                                       background-color: #ffffff;
+                                                     }
+
+                                            
+
+                                            .slider   {
+                                                        display: flex;
+                                                        flex-direction: column;
+                                                        gap: 15px;
+                                                      }        
+
+                                          }
+
+@media only screen and (min-width: 1024px) { 
+                                              nav     {
+                                                        text-align: center;
+                                                        padding: 0 0 0 1em;
+                                                      }
+
+
+                                             #wrapper {
+                                                        
+                                                        background-color: #ffffff;
+                                                        margin: auto;
+                                                      }
+
+                                            .slider   {
+                                                        display: flex;
+                                                        flex-direction: row;
+                                                        gap: 15px;
+                                                        align-items: center;
+                                                        overflow-y: auto;
+                                                      }
+
+                                           
+
+@supports (display: grid) {
+                           nav ul {
+                                    display: flex;
+                                    flex-direction: row;
+                                    padding: 1em;
+                                  }
+                            
+                           #wrapper {
+                                      
+                                      background-color: #ffffff;
+                                      display: grid;
+                                      grid-template-columns: 180px 1fr;
+                                      grid-template-areas: 
+                                                           "h1 h1"
+                                                           "nav nav"
+                                                           "hero hero"
+                                                           "main main"
+                                                           "footer ." ;
+                                    }
+                              h1 { grid-area: h1; }
+                              nav { grid-area: nav; }
+                              .hero { grid-area: hero; }
+                              main { grid-area: main; }
+                              footer { grid-area: footer; }
+                          }
+                        }
