@@ -51,6 +51,8 @@ nav li     {
 
 img        {
              height: 400px;
+             width: 100%;
+             object-fit: cover;
            }
 
 body       {
@@ -117,10 +119,6 @@ footer     {
 
 #homehero  {
               height: 400px;
-              background-image: url(hero.jpg);
-              background-size: 100% 100%;
-              background-repeat: no-repeat;
-              background-position-y: center;
            }
 
 #phone     {
